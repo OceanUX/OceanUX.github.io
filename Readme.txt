@@ -1,4 +1,4 @@
-Thanks for downloading this theme!
+Use this theme of bootstrap
 
 Theme Name: Folio
 Theme URL: https://bootstrapmade.com/folio-bootstrap-portfolio-template/
