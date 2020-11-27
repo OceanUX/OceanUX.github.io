@@ -79,7 +79,7 @@ $(document).ready(function () {
 
   $(function () {
     typed.typed({
-      strings: ["Shaw-Rong Tsai", "UX Designer", "passion at design soltions.", "good at multi-faceted thinking.", "Ocean .", "from Taiwan ."],
+      strings: ["Shaw-Rong Tsai", "UX Designer", "passion at design solutions .", "good at multi-faceted thinking before design .", "Ocean .", "from Taiwan ."],
       typeSpeed: 100,
       loop: true,
     });
