@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="uber, london, licence, twitter, social media analysis, report">
+
+  <title>Uber - social media analytics</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/grayscale.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Uber</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">Introduction</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#projects">Data analysis</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#signup">Tag analysis</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead">
+    <div class="container d-flex h-100 align-items-center">
+      <div class="mx-auto text-center">
+        <!-- mx-auto means margin left and right set auto -->
+        <h1 class="mx-auto my-0 text-uppercase">Uber</h1>
+        <!-- my-0 means margin top and bottom set 0, use css of h1 tage to set the gradient  -->
+        <h2 class="text-white-50 mx-auto mt-2 mb-5">The data report about social media analytics</h2><!-- text-white-50 means font color is white and opacity is 50% -->
+        <a href="#about" class="btn btn-primary js-scroll-trigger">Get Started</a>
+        <!-- js-scroll-trigger is when mouse click class='navbar-collapse' would be hide -->
+      </div>
+    </div>
+  </header>
+
+  <!-- Introduction Section -->
+  <section id="about" class="about-section text-center">
+    <div class="container">
+      <div class="row">
+        <!-- display set flex -->
+        <div class="col-lg-8 mx-auto">
+          <!-- col- is boostrap initial funtion, it uses grid concept to put webpage divided into 12 coloum, col-lg-8 is when the browser in large screen, this element should be take in to 8 of 12 coloum. -->
+          <h2 class="text-white mb-4">Introduction of Social Media Analytics</h2>
+          <p class="text-white-50">According to <a href="https://www.statista.com/statistics/833743/us-users-ride-sharing-services/">statista</a>,
+            Uber’s active users were notably increased in the past few years, the number of users gained from 50
+            million in 2016 to 110 million in 2019. In order to keeping those users while exploring new users, it is
+            valuable to know what are people talking about this brand. Thanks of social media, it is much easier to get
+            more feedback from people than before. Base on introduction of Social Media Analytics and Intelligence,
+            this is concerned with developing and evaluating informatics tools and frameworks to collect, monitor,
+            analyze, summarize, and visualize social media data, usually driven by specific requirements from a target
+            application.
+
+          </p>
+          <p class="text-white-50 text-lg-left mb-0">Social media analytics research serves several purposes:
+            <ul class="text-white-50 text-lg-left ml-0">
+              <li>
+                facilitating conversations and interaction between online communities
+              </li>
+              <li>extracting useful patterns and intelligence to serve entities that include, but are not limited to
+                active contributors in ongoing dialogues.
+              </li>
+            </ul>
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Data Section -->
+  <section id="projects" class="projects-section bg-light">
+    <div class="container">
+      <p class="text-black-50">
+        Based on <a href="https://s3.amazonaws.com/academia.edu.documents/43136252/Unveiling_the_Power_of_Social_Media_Analytics_CACM_final_2013.pdf?response-content-disposition=inline; filename=The_Power_of_Social_Media_Analytics_Unve.pdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWOWYYGZ2Y53UL3A/20200118/us-east-1/s3/aws4_request&X-Amz-Date=20200118T115835Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=572bece46938e0e8c39ef926c44ffc709c5de607d82c242b206887179fdc7f44">the
+          report of The
+          Power of Social Media Analytics</a>, social media analytics involves a three-stage process: capture,
+        understand and present. This report would be more focus on the capture and understand stages.
+
+      </p>
+      <div class="featured-text text-center text-lg-left">
+        <h4>In the capture step
+        </h4>
+      </div>
+      <p class="text-black-50">The social media platform is used Twitter as the resource, because a tweet is a
+        message of up to 140 characters. Three types of tweets are found in Twitter: original tweets, replies, and
+        retweets. Original tweets appear in the sender's profile page and Home-timeline. Such an original tweet can be
+        retweeted by other users. Also, Twitter users can join the conversation by @replying to others and retweeting.
+        These tweets are traceable. Twitter offers API to researchers, practitioners, and organizations that are
+        interested in collecting and analyzing tweets (<a href="https://dev.twitter.com/docs">Twitter</a>).
+
+      </p>
+      <p class="text-black-50">The capture stage must balance the need for finding information from all quarters
+        (inclusivity) with focusing on sources that are most relevant and authoritative (exclusivity)
+        to assist in more refined understanding. So, by using ‘Uber’ as a keyword, the report can be effective to
+        gather the most relevant information. The amount of data was collected in 486,317 from 26/11/2019 to
+        29/11/2019, which included 155,283 of original tweets and 331,034 of retweets. It was clear to show almost 70%
+        data were from retweets.
+      </p>
+      <div class='ml-auto mr-auto col-xl-8 col-lg-7' id="piechart" style="width: 900px; height: 500px;"></div>
+      <div class="featured-text text-center text-lg-left">
+        <h4>In the understanding step
+        </h4>
+      </div>
+      <p class="text-black-50">This stage provides information about users’ sentiments—how they feel about the
+        company and its products— and their behaviors. Many useful metrics and trends about users can be produced in
+        this stage, covering their backgrounds, interests, concerns, and networks of relationships.
+
+      </p>
+
+      <p class="text-black-50">At first, by using PrivotTable function of excel, there were 394,047 users in
+        original data and the top tweeter and retweeter were drivingjustice which tweeted 3,957 tweets and ShieldVoC
+        which retweeted 667 tweets respectively during the period.
+      </p>
+      <p class="text-black-50">However, the times of tweets and retweets were too high than general, according to
+        the article, a human Twitter user might post 10-15 times a day. A bot account will post with high frequency, up
+        to 2,000 times a day. That’s more than a tweet a minute, every minute, for 24 hours. Not even the worst human
+        is capable of this.
+      </p>
+      <p class="text-black-50">In order to acquiring information from general people, it was important to exclude
+        invalid data, such as robots and official account of Uber. There were two tools ( <a href="https://botometer.iuni.iu.edu/#!/">Botometer</a>
+        and <a href="https://foller.me/">foller.me</a>) to identify the user accounts. The judging criteria were the
+        number over 3 of 5, which would be treat as robots and the account names that included Uber and be valid by
+        official twitter, which would be treat as official accounts.
+      </p>
+      <p class="text-black-50">There were two steps to clean the data, firstly, using the sort and simple math
+        function to find out the users who tweeted over 10 times a day, then detected all of these users accounts.
+        Secondly, removing the invalid users data which included the text contents.
+      </p>
+      <p class="text-black-50">On one hand, there were 81 users tweeted over 10 times a day. By using the tools,
+        we categories some types of invalid users, there were account suspended, official account, rot, Ubereats
+        recruitment, rot and follower amounts less than 100, which were 10, 6, 10, 3 and 19 separated.
+
+      </p>
+      <p class="text-black-50">In the other hand, there were 152 users retweeted over 10 times a day. As the same
+        as previous method, there were two types of invalid users, which were account suspended (34) and bot(18).
+      </p>
+      <p class="text-black-50">Hence, there were the latest top 10 tweeters and retweeters which were general
+        people accounts.
+        The top tweeter was cuponsddesconto which tweeted 148 during the time, and ossien1 retweeted 193 as top
+        retweeter.
+      </p>
+      <div class="row justify-content-center no-gutters mb-5 mb-lg-0 table">
+        <!-- no-gutters means margin left and right set 0 -->
+        <div class="col-lg-6 ">
+          <table class="col-lg-11 text-center">
+            <tr>
+              <th>Top 10 Tweeters</th>
+              <th>Amounts of tweets</th>
+            </tr>
+            <tr>
+              <td>cuponsddesconto</td>
+              <td>148</td>
+            </tr>
+            <tr>
+              <td>CupomdoIfood</td>
+              <td>127</td>
+            </tr>
+            <tr>
+              <td>CamilaTIMBeta17</td>
+              <td>126</td>
+            </tr>
+            <tr>
+              <td>CupomIfood27</td>
+              <td>126</td>
+            </tr>
+            <tr>
+              <td>Anthony23Bryant</td>
+              <td>97</td>
+            </tr>
+            <tr>
+              <td>DaRealSafado</td>
+              <td>84</td>
+            </tr>
+            <tr>
+              <td>DevsInsider</td>
+              <td>82</td>
+            </tr>
+            <tr>
+              <td>TheSoulCab</td>
+              <td>69</td>
+            </tr>
+            <tr>
+              <td>ProPlusTaxi</td>
+              <td>64</td>
+            </tr>
+            <tr>
+              <td>Cab4Now</td>
+              <td>55</td>
+            </tr>
+
+          </table>
+        </div>
+        <div class="col-lg-6">
+          <table class="col-lg-11 table text-center">
+            <tr>
+              <th>Top 10 Retweeters</th>
+              <th>Amounts of retweets</th>
+            </tr>
+            <tr>
+              <td>ossien1</td>
+              <td>193</td>
+            </tr>
+            <tr>
+              <td>sharks1334</td>
+              <td>122</td>
+            </tr>
+            <tr>
+              <td>Gambiste1</td>
+              <td>120</td>
+            </tr>
+            <tr>
+              <td>ProPlusTaxi</td>
+              <td>117</td>
+            </tr>
+            <tr>
+              <td>onetokebloke</td>
+              <td>111</td>
+            </tr>
+            <tr>
+              <td>TheSoulCab</td>
+              <td>110</td>
+            </tr>
+            <tr>
+              <td>jockneycab</td>
+              <td>103</td>
+            </tr>
+            <tr>
+              <td>LTDAForum</td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td>michaellangfrey</td>
+              <td>97</td>
+            </tr>
+            <tr>
+              <td>KestonCabby</td>
+              <td>95</td>
+            </tr>
+
+          </table>
+        </div>
+      </div>
+
+      <div class="row align-items-center mt-2 ">
+        <div class="col-xl-7 col-lg-8">
+          <!-- col-xl means when browser at min-width: 1200px, -->
+          <div class="featured-text text-center text-lg-left">
+            <h4>The top retweet</h4>
+            <p class="text-black-50">When we focused on the top retweet, which was retweeted 54,926 in three
+              days.</p>
+            <p class="text-black-50">
+              According to this largest
+              number of retweeting, it pointed out the potential safety concern for users and potential crisis of
+              losing
+              users.
+            </p>
+          </div>
+        </div>
+        <div class="col-xl-5 col-lg-5 ">
+          <!-- embed the top tweet -->
+          <blockquote class="twitter-tweet mb-3 mb-lg-3">
+            <p lang="en" dir="ltr">I found out recently that a bunch of Uber drivers were arrested for being a part of
+              a sex trafficking group. I then found out that not all uber drivers go through back ground checks. It’s
+              like a lottery picking of who is checked. Sooo my friends (women) start using LYFT.</p>&mdash; Jordan
+            Harman (@jordan_harman) <a href="https://twitter.com/jordan_harman/status/1198992470094368769?ref_src=twsrc%5Etfw">November
+              25, 2019</a>
+          </blockquote>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+      </div>
+
+      <p class="text-black-50 mt-5">
+        In addition, after cleaning the raw data, the ratio of tweets to retweets was 1:2.24, which was calculated by
+        146,457 of tweets and 328,244 of retweets. From the original tweet perspective, there was 2.2% tweets came from
+        top 10 tweeter and only 0.4% retweets came from top 10 retweeters. It showed that the information from
+        retweeters was more valuable than tweeters, because the information people talking about were less influence by
+        specific people (top 10 people.)
+      </p>
+    </div>
+    </div>
+  </section>
+
+  <!-- Tag Section -->
+  <section id="signup" class="signup-section">
+    <div class="container">
+      <div class="row">
+        <p class="text-white ">
+          Next, based on the time period, it just the day after news reported about Uber losing license from TFL. It
+          was
+          valuable to probe the reaction of people. So, we sort of all included ‘London’ and ‘license’ from raw data,
+          which were 6,999 tweets.
+        </p>
+        <div class="row ml-auto mr-auto col-xl-8 col-lg-7 ">
+          <img class="img-fluid mb-3 " src="img/tag.png" alt="tag image">
+        </div>
+        <p class="text-white mb-5">
+          And then using tag cloud to understand what were the word people mention most. Except the initial keywords
+          (Uber, London, and license and licence) , there were drivers, loses, TFL, operate and transport which was be
+          used frequently. Besides, when we narrow down to the co-tag which be used together, the top 3 tags were
+          BlackFriday (147 times), Futurism (40 times), AlwaysUseABlackCab (19 times).
+        </p>
+
+        <div class="row justify-content-center no-gutters mt-5">
+          <div class="col-lg-6 time">
+            <!-- embed the time seris which made by datawrapper.de -->
+            <iframe class='pr-5 pl-5 pt-2 pb-2 w-100' title="Time series of Tweets&amp;nbsp; " aria-label="Interactive line chart"
+              src="//datawrapper.dwcdn.net/CSBhw/3/" scrolling="no" frameborder="0" style="border: none;background: #fff"
+              width="100%" height="400"></iframe>
+          </div>
+          <div class="col-lg-6 order-lg-first">
+            <div class="bg-black text-center h-100 project">
+              <div class="d-flex h-100">
+                <div class="project-text w-100 my-auto text-center text-lg-right">
+                  <h4 class="text-white mr-4">Time series</h4>
+                  <p class="mb-0 mr-4 text-white-50">The graph showed time series of people tweets. It depicted
+                    most tweets were appear at 26/11/2019 17:00, which were 326 tweets. And the trend was
+                    fluctuated and graudally decrease.
+                  </p>
+                  <hr class="d-none d-lg-block mb-0 mr-0">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row justify-content-center no-gutters mt-5 mb-5 mb-lg-0">
+          <div class="col-lg-6">
+
+            <table class="text-center bg-white table">
+              <tr>
+                <th>Location</th>
+                <th>Amounts of tweets</th>
+              </tr>
+              <tr>
+                <td>London</td>
+                <td>1492</td>
+              </tr>
+              <tr>
+                <td>England</td>
+                <td>355</td>
+              </tr>
+              <tr>
+                <td>UK</td>
+                <td>245</td>
+              </tr>
+              <tr>
+                <td>New York, NY</td>
+                <td>109</td>
+              </tr>
+              <tr>
+                <td>epping</td>
+                <td>60</td>
+              </tr>
+              <tr>
+                <td>India</td>
+                <td>51</td>
+              </tr>
+              <tr>
+                <td>Canada</td>
+                <td>48</td>
+              </tr>
+              <tr>
+                <td>United States</td>
+                <td>45</td>
+              </tr>
+              <tr>
+                <td>Lagos, Nigeria</td>
+                <td>38</td>
+              </tr>
+              <tr>
+                <td>Stamford Hill</td>
+                <td>31</td>
+              </tr>
+
+            </table>
+          </div>
+          <div class="col-lg-6 ">
+            <div class="bg-black text-center h-100 project">
+              <div class="d-flex h-100">
+                <div class="project-text w-100 my-auto text-center text-lg-left">
+                  <h4 class="text-white ml-4">Location</h4>
+                  <p class="mb-0 text-white-50 ml-4 mr-2">There were only 15 tweets included
+                    geo
+                    code
+                    (0.2%) but 70.4% of tweets had locations (4,928 tweets.) According to the statistics, it was clear
+                    to
+                    see the top 3 locations were from United Kingdom, which means the topic attract attention by area
+                    limited.
+                  </p>
+                  <div class='ml-auto mr-auto mt-5 col-xl-8 col-lg-7' id="piechart2" style="width: 900px"></div>
+                  <hr class="d-none d-lg-block mb-0 ml-0">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="text-white mt-2">
+            Besides, there were two indexes to discuss about the information influence, the amounts of followers and
+            tweeters volumes. The graph depicted the amounts of users which divided into different followers range. The
+            majority of users have 100 to 9,999 followers. They were 1,813 users which had more than one hundred
+            followers and less than one thousand, and 1,417 users which had more than one thousand followers and less
+            than ten thousand.
+          </p>
+          <div class='ml-auto mr-auto col-xl-8 col-lg-7' id="barchart_values" style="width: 1200px; height: 500px;"></div>
+          <p class="text-white mt-2">
+            Finally, there was the graph showed the tweeters volume. It was calculated by tweets times of each user. As
+            only one user tweeted over 90 times, most of the people tweeted during one to 10 times during the time.
+            There
+            were 85% of people tweeted one time, 12.3% of people tweeted two to five times and 1.7% of people tweeted
+            six
+            to 10 times.
+          </p>
+          <div class='ml-auto mr-auto col-xl-8 col-lg-7' id="chart_div" style="width: 900px; height: 500px;"></div>
+        </div>
+      </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="bg-black small text-center text-white-50">
+    <div class="container">
+      Copyright &copy; OceanUX 2019
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this webpage -->
+  <script src="js/grayscale.min.js"></script>
+
+  <!-- Goolgle charts JavaScript -->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', { 'packages': ['corechart'] });
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = google.visualization.arrayToDataTable([
+        ['Type of tweet', 'Number of tweets'],
+        ['Original tweets', 155283],
+        ['Retweets', 331034],
+      ]);
+
+      var options = {
+        title: 'The proportion of two types of tweets'
+      };
+
+      var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+      chart.draw(data, options);
+    }
+  </script>
+  <script type="text/javascript">
+    google.charts.load('current', { 'packages': ['corechart'] });
+    google.charts.setOnLoadCallback(drawChart4);
+
+    function drawChart4() {
+
+      var data = google.visualization.arrayToDataTable([
+        ['Type of location', 'Number of users'],
+        ['Profiles with locations', 4928],
+        ['Geo code', 15],
+      ]);
+
+      var options = {
+        title: 'The proportion of two types of location'
+      };
+
+      var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
+
+      chart.draw(data, options);
+    }
+  </script>
+  <script type="text/javascript">
+    google.charts.load("current", { packages: ["corechart"] });
+    google.charts.setOnLoadCallback(drawChart1); // when browser loading the page, call this funtion
+    function drawChart1() {
+      var data = google.visualization.arrayToDataTable([
+        ["number of follwers", "number of users", { role: "style" }],
+        [">10,000,001", 6, "#b87333"],
+        ["999,999-10,000,000", 20, "#146eb4"],
+        ["99,999-1,000,000", 80, "#b84592"],
+        ["9,999-100,000", 321, "color: #ff6c5f"],
+        ["999-10,000", 1417, "color: #ffc168"],
+        ["99-1,000", 1813, "color: #1cc7d0"],
+        ["<100", 950, "color: #49c0b6"]
+      ]);
+
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+        {
+          calc: "stringify",
+          sourceColumn: 1,
+          type: "string",
+          role: "annotation"
+        },
+        2]);
+
+      var options = {
+        title: "The users' influence by number of follwers",
+        bar: { groupWidth: "95%" },
+        legend: { position: "none" },
+        chartArea: { right: 50 },
+        vAxis: {
+          title: 'number of follwers'
+        },
+        hAxis: {
+          title: 'number of users '
+        },
+      };
+      var chart = new google.visualization.BarChart(document.getElementById("barchart_values"));
+      chart.draw(view, options);
+    }
+
+    google.charts.setOnLoadCallback(drawChart2);
+    // draw Histogram of tweeters volumes
+    function drawChart2() {
+      var data = google.visualization.arrayToDataTable([
+        ['tweets times', 'number of users'],
+        ['91-100 times', 1],
+        ['51-60 times', 1],
+        ['41-50 times', 1],
+        ['31-40 times', 4],
+        ['21-30 times', 13],
+        ['16-20 times', 7],
+        ['11-15 times', 22],
+        ['6-10 times', 77],
+        ['5 times', 31],
+        ['4 times', 50],
+        ['3 times', 118],
+        ['2 times', 367],
+        ['1 times', 3915],
+      ]);
+
+      var options = {
+        title: 'tweeters volumes',
+        legend: { position: 'none' },
+        vAxis: {
+          title: ' tweets times'
+        },
+        hAxis: {
+          title: 'number of users '
+        },
+
+      };
+
+      var chart = new google.visualization.Histogram(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,217 @@
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: courier;
+            overflow-x: hidden;
+        }
+
+        .top {
+            width: 100%;
+            height: 95%;
+            margin: 50px auto;
+            padding: 0;
+            overflow: hidden;
+            position: relative; 
+
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
+            position: relative;/*to control the inside block can fix on  the map in the right way*/
+        }
+
+        .box {
+            width: 25%;
+            display: inline-block;
+            vertical-align: top;
+            margin: 10px 10px;
+            position: absolute; /*the position is base on the map position*/
+            z-index: 1;
+            background-color: #fff;
+            box-shadow: #ccc 1px 1px;
+            border-radius: 4px;
+            opacity: 0.95;
+        }
+
+        .box2 {
+            width: 25%;
+            height: 42%;
+            display: inline-block;
+            vertical-align: top;
+            margin: 10px 10px 0;
+            position: absolute;
+            z-index: 1;
+            right: 0;
+            background-color: #fff;
+            box-shadow: #ccc 1px 1px;
+            border-radius: 4px;
+            opacity: 0.95;
+        }
+
+        .box4 {
+            width: 25%;
+            display: inline-block;
+            vertical-align: top;
+            margin: 10px 10px;
+            position: absolute;
+            z-index: 1;
+            top: 283px;
+            right: 0;
+            background-color: #fff;
+            box-shadow: #ccc 1px 1px;
+            border-radius: 4px;
+            opacity: 0.95;
+        }
+
+        .box3 {
+            width: 25%;
+            display: inline-block;
+            vertical-align: top;
+            margin: 10px 10px;
+            position: absolute;
+            top: 252px;
+            z-index: 1;
+            background-color: #fff;
+            box-shadow: #ccc 1px 1px;
+            border-radius: 4px;
+            opacity: 0.95;
+        }
+
+        #chart_div {
+            width: 100%;
+            height: 300px;
+            transform: scale(0.9);
+            margin-top: -60px;
+        }
+
+        .box>div,
+        .box3>div {
+            margin: 20px 10px;
+            color: #777777;
+            font-size: 0.8em;
+        }/* suitable for all the div below class box and box3*/
+
+        h1 {
+            margin: 10px 0 0 0;
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        h4 {
+            margin: 5px 0 -40px 0;
+            text-align: center;
+        }
+
+        h2 {
+            margin: 20px 10px;
+            font-size: 1em;
+        }
+
+        p {
+            font-size: 1.2em;
+            display: inline;
+            color: #5d5c5d;
+            font-weight: bold;
+        }
+
+        .average {
+            color: #777777;
+            font-size: 0.6em;
+            margin: 3px 0 0 0;
+            display: block;
+            text-align: left;
+        }
+
+        #pieChart {
+            margin: -40px 20px 0 0;
+            transform: scale(0.8);
+        }
+
+        .content {
+            width: 80%;
+            margin: 0 auto;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-align: justify;
+        }
+
+        .content>div {
+            margin: 20px 10px;
+            line-height: 1.4em;
+        }
+
+        .content>h1 {
+            text-align: left;
+            font-size: 1.6em;
+        }
+
+        .content h1:after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1px;
+            margin-top: 10px;
+            background-color: #000;
+        }/* draw a fake demarcation line*/
+
+        .content>div:last-child {
+            margin-bottom: 100px;
+        }
+
+        #chart_work,
+        #chart_income {
+            margin: 0 0 0 5px;
+            text-align: center;
+            width: 49%;
+            height: 500px;
+            display: inline-block;
+            position: relative;
+        }
+        #chart_rent {
+            height: 500px;
+            position: relative;
+        }
+        #chart_work:after{
+            content:'source from ONS in mid-2018';
+            color:#cccccc;
+            font-size: 0.8em;
+            text-align: right;
+            position: absolute;
+            bottom: -10px;
+            right: 0;
+        }/*make a footnote about the chart*/
+        #chart_income:after{
+            content:'source from ONS between 2016 and 2017';
+            color:#cccccc;
+            font-size: 0.8em;
+            text-align: right;
+            position: absolute;
+            bottom: -10px;
+            right: 0;
+        }/*make a footnote about the chart*/
+        #chart_rent:after{
+            content:'source from ONS between 2016 and 2018';
+            color:#cccccc;
+            font-size: 0.8em;
+            text-align: right;
+            position: absolute;
+            bottom: -10px;
+            right: 50px;
+        }/*make a footnote about the chart*/
+
+        footer {
+            width: 100%;
+            background-color: #333333;
+            text-align: center;
+            display: inline-block;
+            margin: 0 auto;
+            padding: 2px 0 6px 0;
+            color: #cccccc;
+            font-size: 1em;
+        }
+
+        footer>i {
+            font-size: 0.5em;
+        }

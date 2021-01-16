@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<script src="//d3js.org/d3.v4.0.0-alpha.4.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/d3/4.7.2/d3.min.js"></script>
+<script src="d3pie.min.js"></script>
+<script src="https://kit.fontawesome.com/ab9a9859f5.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="chart.js"></script>
+<script type="text/javascript" src="pie.js"></script>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="england.png" />
+
+<head>
+    <title>Map of England</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h1>Do you know enough about where you live in England?</h1>
+    <h4>Click the area on map to know more</h4>
+    <div class="top">
+        <div class="box">
+            <h2>Population & Income</h2>
+            <div> Region : <p id="show">England</p>
+            </div>
+            <div>Population : <p id="population">55619430</p>
+            </div>
+            <div>Rate of Population : <p id="ratepeople"> 100 %</p>
+            </div>
+            <div>Work people : <p id="people"> 35049467</p>
+            </div>
+            <div>Average income : <p id="showData"> £ 26534</p>
+            </div>
+        </div>
+        <div class="box3">
+            <h2>Index of Living</h2>
+            <div>Life satisfaction : <p id="life"> 7.60</p> / 10
+                <p class="average">( average: 7.60 )</p>
+            </div>
+
+            <div>Happiness : <p id="happy"> 7.45</p> / 10<p class="average">( average: 7.45 )</p>
+            </div>
+            <div>Anxiety : <p id="anxiety"> 2.86</p> / 10<p class="average">( average: 2.86 )</p>
+            </div>
+        </div>
+        <div class="box2">
+            <h2>Population Distribution</h2>
+            <div id="pieChart"></div>
+        </div>
+        <div class="box4">
+            <h2>Rent Distribution</h2>
+            <div id="chart_div"></div>
+        </div>
+        <div id="map"></div>
+    </div>
+    <div class="content">
+        <h1>The research result about region population and index of living</h1>
+        <div>
+            According to the data collection from ONS in last five year,
+            South East, London and North West are the top three largest proportions of England, which are 17%, 16% and
+            13%.
+        </div>
+        <div>
+            But in the proportion of work people in each area, which age is between 16 to 65, top three of the biggest
+            amount are London(67.51%) , North East(62.47%) and Yorkshire and the Humber(62.36%). That shows people who
+            lives in this three areas are more capability to afford the daily expenses by themselves.
+        </div>
+        <div id="chart_work"></div>
+        <div id="chart_income"></div>
+        <div>
+            Thus, if we narrow down into annual average income of area, London, South East, Eastern are relatively rich
+            people where choose to live, their average salary are £ 34,210.526, £ 28,971.963, £ 26,796.407,
+            respectively.
+        </div>
+        <div id="chart_rent"></div>
+        <div>
+            In the chart of rent distribution, the average rent in England is £7,070.90.
+            However, there is one-third of areas more expensive than average, which are London (£11,505.90), South
+            east (£8,270.4) and Eastern (£7,771.2.) The information clearly shows a connection between average income
+            and
+            income which means the
+            more people who earn higher money live in the area, the more expensive rent people cost.
+        </div>
+        <div>
+            Otherwise, according to BBC news showed there is no official UK measure of what constitutes an
+            "unaffordable" rent, but based on recommendations from housing organisations the analysis uses a
+            threshold of no more than 30% of income. Therefore, the chart also mentions an interesting phenomenon.
+            People who live in most of the areas are in an affordable situation to pay house rent, except London. The
+            percentage of rent in London is 33.6%, which means the current rent (£11,505.6) is higher than
+            possible afford rent £10,263.16 based on 30% of average income. The result shows that people who live in
+            London would need to
+            face more pressure on their economy to cover their life
+            By the way, when we probe about the index of living, people who live in London have lowest life
+            satisfaction and highest anxiety, which are 7.5 and 3.01, respectively.
+        </div>
+        <div>
+            To sum up, based on the region, average income and rent is positive relevant that higher income cause
+            higher rent. And the index of living, there is not obviously related with population and affordable of
+            rent.
+            However, we can discover people who live in London have lowest life
+            satisfaction and highest anxiety. It is possibility affected by degree of
+            crowdedness and pressure of high rent.
+        </div>
+    </div>
+    <footer>
+        copyright <i class="far fa-copyright"></i> 2020 by OceanUX
+    </footer>
+</body>
+<script>
+    //  below is load d3 pie chart
+    pie();
+
+    // below is load all google charts 
+    google.charts.load('current', { packages: ['corechart', 'bar'] });
+    google.charts.setOnLoadCallback(drawVisualization);
+    google.charts.setOnLoadCallback(drawMultSeries);
+    google.charts.setOnLoadCallback(drawChart);
+    google.charts.setOnLoadCallback(drawSeriesChart);
+
+    // google map interaction
+    var map;
+    function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 6,
+            center: { lat: 53.086284, lng: -1.801757 },
+            gestureHandling: 'none',
+            zoomControl: false,
+            styles: styleMap()
+
+        });
+
+        loadMapShapes(); //call shape of england  function
+        clickMap(); //call the click interaction function
+    }
+
+
+    function loadMapShapes() {
+        // load UK polygons from a GeoJson file
+        map.data.loadGeoJson('ukregion.geojson', { idPropertyName: 'REGION' });
+    }
+
+    function clickMap() {
+        map.data.setStyle(function (feature) {
+            var color = 'gray';
+            return ({
+                fillColor: color,
+                strokeColor: color,
+                strokeWeight: 2
+            });
+        });
+
+        map.data.addListener('click', function (event) {
+
+            map.data.overrideStyle(event.feature, {
+                fillColor: '#004a77',
+                strokeColor: '#239ab9',
+                strokeWeight: 5
+            });
+
+            // when the mouse click, it will call the json value to put the data into each html ID 
+            document.getElementById('showData').textContent =
+                '£ ' + event.feature.getProperty('INCOME');
+            document.getElementById('people').textContent =
+                event.feature.getProperty('WORKPEOPLE');
+            document.getElementById('population').textContent =
+                event.feature.getProperty('POPULATION');
+            document.getElementById('ratepeople').textContent =
+                (event.feature.getProperty('RATEPEOPLE') * 100) + '%';
+
+            document.getElementById('life').textContent =
+                event.feature.getProperty('LIFE');
+
+            document.getElementById('happy').textContent =
+                event.feature.getProperty('HAPPY');
+
+            document.getElementById('anxiety').textContent =
+                event.feature.getProperty('ANXIETY');
+
+
+            // get the value from json and store the data in the browser which can be use later
+            var l = Number(event.feature.getProperty('LIFE'));
+            var h = Number(event.feature.getProperty('HAPPY'));
+            var a = Number(event.feature.getProperty('ANXIETY'));
+            localStorage.clear();
+            localStorage.setItem("life", l);
+            localStorage.setItem("happy", h);
+            localStorage.setItem("anxiety", a);
+
+            // when mouse,click change each ID's text color
+            document.getElementById('show').textContent =
+                event.feature.getProperty('NAME');
+            document.getElementById('show').style.color =
+                '#239ab9'
+            document.getElementById('showData').style.color =
+                '#239ab9'
+            document.getElementById('people').style.color =
+                '#239ab9'
+            document.getElementById('population').style.color =
+                '#239ab9'
+            document.getElementById('ratepeople').style.color =
+                '#239ab9'
+
+            // the code below here is to use other function to put the vlaue in it
+            document.getElementById('life').style.color =
+                evaluateValue()
+            document.getElementById('happy').style.color =
+                evaluateValue2()
+            document.getElementById('anxiety').style.color =
+                evaluateValue3()
+        });
+
+
+        // when hover, the region change outline
+        map.data.addListener('mouseover', function (event) {
+            map.data.revertStyle();
+            map.data.overrideStyle(event.feature, { fillColor: '#333333', strokeWeight: 8 });
+        });
+
+        map.data.addListener('mouseout', function (event) {
+            map.data.revertStyle();
+        });
+    }
+
+    // determine the value higher or lower than average
+    function evaluateValue() {
+        var l = localStorage.getItem("life"); //take the value store in the browser
+        console.log(l);
+        var LC;
+        if (l > 7.6) {
+            LC = '#669c34'
+        } else {
+            LC = '#dd1321'
+        };
+        return LC; //return the value to the whole code make other funtion can use it
+    };
+    function evaluateValue2() {
+        var h = localStorage.getItem("happy");
+        var HC;
+        if (h >= 7.45) {
+            HC = '#669c34'
+        } else {
+            HC = '#dd1321'
+        };
+        return HC;
+    }
+    function evaluateValue3() {
+        var a = localStorage.getItem("anxiety");
+        var AC;
+        if (a <= 2.86) {
+            AC = '#669c34'
+        } else {
+            AC = '#dd1321'
+        };
+        return AC;
+    }
+
+    // goolemap style
+    function styleMap() {
+        var style = [
+            {
+                "featureType": "all",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                    {
+                        "color": "#a8afbf"
+                    }
+                ]
+            },
+            {
+                "featureType": "all",
+                "elementType": "labels.text.stroke",
+                "stylers": [
+                    {
+                        "visibility": "on"
+                    },
+                    {
+                        "color": "#373d48"
+                    },
+                    {
+                        "weight": 2
+                    },
+                    {
+                        "gamma": "1"
+                    }
+                ]
+            },
+            {
+                "featureType": "all",
+                "elementType": "labels.icon",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "administrative",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "weight": 0.6
+                    },
+                    {
+                        "color": "#4c576f"
+                    },
+                    {
+                        "gamma": "0"
+                    }
+                ]
+            },
+            {
+                "featureType": "landscape",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "color": "#424c65"
+                    },
+                    {
+                        "gamma": "1"
+                    },
+                    {
+                        "weight": "10"
+                    }
+                ]
+            },
+            {
+                "featureType": "poi",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "color": "#4c576f"
+                    }
+                ]
+            },
+            {
+                "featureType": "poi.park",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "color": "#424d66"
+                    }
+                ]
+            },
+            {
+                "featureType": "road",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "color": "#37425c"
+                    },
+                    {
+                        "lightness": "0"
+                    }
+                ]
+            },
+            {
+                "featureType": "transit",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "color": "#4c576f"
+                    }
+                ]
+            },
+            {
+                "featureType": "water",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "color": "#2b364f"
+                    }
+                ]
+            }
+        ];
+        return style;
+    }
+
+
+
+
+
+</script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXSSFoPnJ7k1DzRPadeTVsU8Yxd0FPxi0&callback=initMap">
+</script>
+
+
+</html>
