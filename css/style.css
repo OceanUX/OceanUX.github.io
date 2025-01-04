@@ -1,4 +1,3 @@
-
 /*
   Theme Name: Folio
   Theme URL: https://bootstrapmade.com/folio-bootstrap-portfolio-template/
@@ -27,7 +26,12 @@ body {
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
 
@@ -60,7 +64,8 @@ a:hover {
   transition: all 0.5s ease-in-out 0s;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   color: #b8a07e;
   text-decoration: underline;
 }
@@ -113,7 +118,8 @@ p {
   margin-bottom: 5%;
 }
 
-.btn:hover, .btn:focus {
+.btn:hover,
+.btn:focus {
   color: #fff;
   background: #333;
 }
@@ -172,6 +178,10 @@ p {
 
 .mb-30 {
   margin-bottom: 30px;
+}
+
+.pt-30 {
+  padding-top: 30px;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -336,6 +346,11 @@ nav ul li a {
 .owl-item {
   float: left;
 }
+
+.services-block {
+  padding: 10px 0;
+}
+
 .services-block span {
   margin: 10px 0;
   position: relative;
@@ -351,6 +366,7 @@ nav ul li a {
   margin: 0;
   font-size: 10px;
   line-height: 20px;
+  width: 23rem;
 }
 
 .services-block i {
@@ -359,9 +375,15 @@ nav ul li a {
   line-height: 44px;
 }
 
+.services-carousel {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
 
-.services-carousel  .owl-stage-outer {
+.services-carousel .owl-stage-outer {
   overflow: hidden;
+
 }
 
 .services-carousel .owl-dots {
@@ -426,7 +448,8 @@ nav ul li a {
   transition: all 0.5s ease-in-out 0s;
 }
 
-#portfolio .portfolio-list .nav li:hover, #portfolio .portfolio-list .nav li.filter-active  {
+#portfolio .portfolio-list .nav li:hover,
+#portfolio .portfolio-list .nav li.filter-active {
   color: #b8a07e;
   -moz-transition: all 0.5s ease-in-out 0s;
   -ms-transition: all 0.5s ease-in-out 0s;
@@ -450,18 +473,22 @@ nav ul li a {
 .portfolio-thumbnail img {
   max-width: 100%;
 }
-#portfolio .container h4{
+
+#portfolio .container h4 {
   font-size: 16px;
 }
-#portfolio .portfolio-container i{
+
+#portfolio .portfolio-container i {
   font-size: 14px;
   padding-right: 4px;
 }
+
 /*-----------------------------------------------------------------------------------*/
 /*  Journal
 /*-----------------------------------------------------------------------------------*/
 
-#journal,  #journal-blog {
+#journal,
+#journal-blog {
   height: auto;
   width: 100%;
   background: #f7f7f7;
@@ -512,11 +539,12 @@ nav ul li a {
   font-size: 12px;
   line-height: 24px;
 }
-.journal-block .journal-info .journal-txt btn{
+
+.journal-block .journal-info .journal-txt btn {
   text-align: center;
 }
 
-.journal-block .journal-info .journal-txt i{
+.journal-block .journal-info .journal-txt i {
   font-size: 14px;
   padding-right: 4px;
 }
@@ -588,7 +616,7 @@ nav ul li a {
 
 #footer {
   background: #f7f7f7;
-  
+
 }
 
 #footer p {
