@@ -10,28 +10,6 @@
   <meta content="" name="keywords">
   <meta content="" name="description">
 
-
-  <!-- Google Tag Manager -->
-  <script>
-    (function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-W63RMS5');</script>
-  <!-- End Google Tag Manager -->
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://googletagmanager.com/gtag/js?id=G-W514TSRD52"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-W514TSRD52');
-  </script>
   <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,700,700i,900,900i"
@@ -54,6 +32,7 @@
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="images/icon.png">
+
   <!-- =======================================================
     Theme Name: Folio
     Theme URL: https://bootstrapmade.com/folio-bootstrap-portfolio-template/
@@ -62,13 +41,7 @@
   ======================================================= -->
 </head>
 
-
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://googletagmanager.com/ns.html?id=GTM-W63RMS5" height="0" width="0"
-      style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-
 
   <!-- start section navbar -->
   <nav id="main-nav">
@@ -83,9 +56,9 @@
 
         <ul class="nav-menu list-unstyled">
           <li><a href="#header" class="smoothScroll">Home</a></li>
-          <li><a href="#about" class="smoothScroll">About</a></li>
           <li><a href="#portfolio" class="smoothScroll">Work projects</a></li>
           <li><a href="#journal" class="smoothScroll">Side Projects</a></li>
+          <li><a href="#about" class="smoothScroll">About</a></li>
           <li><a href="#contact" class="smoothScroll">Contact</a></li>
         </ul>
 
@@ -115,58 +88,21 @@
   <!-- End section header -->
 
 
-  <!-- start section about us -->
-  <div id="about" class="paddsection">
-    <div class="container">
-      <div class="row justify-content-between">
-
-        <div class="col-lg-4 ">
-          <div class="div-img-bg">
-            <div class="about-img">
-              <img src="images/me1.jpg" class="img-responsive" alt="me">
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-7">
-          <div class="about-descr">
-            <!-- im a ux /ui designer austin based who loves clean, simple & unique design. i also
-            enjoy crafting brand identities, icons, & ilustration work. -->
-            <p class="p-heading">About me </p>
-            <p class="separator">Experienced UX Designer with over five years of industry design experience executing
-              user-centered product development, especially focusing on SaaS products for Small and Medium Enterprises
-              (SMEs). Balancing user usability and product feasibility is my passionate.
-            </p>
-            <p class="separator">Acquired additional skills as a MSc student in User Experience Engineering at
-              University of London, Goldsmiths with interest in driving development of meaningful products through
-              eliciting user feedback, employing user testing, and optimising user flow
-            </p>
-            <p class="separator">Excellent research knowledge, proficient in a broad array of technical skills in web
-              and app development, expertise in data analysis and visualisation, strong client and multi-disciplinary
-              team communication and collaboration, and passion for building valuable products that meet diverse
-              stakeholder needs
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- end section about us -->
-
-
   <!-- start section services -->
   <div id="services">
-    <div class="container">
 
-      <div class="services-carousel owl-theme">
+    <div class="container">
+      <div class="section-title text-center pt-30 mb-30">
+        <h2>What I can provide</h2>
+      </div>
+      <div class="services-carousel owl-theme text-center  ">
 
         <div class="services-block">
 
           <i class="ion-ios-browsers-outline"></i>
           <span>UI/UX DESIGN</span>
-          <p class="separator">Proficient: <b>Sketch, inVision</b></p>
-          <p class="separator">Competent: <b>Axure, Adobe XD</b></p>
+          <p class="separator">Proficient: <b>Figma, Sketch</b></p>
+          <p class="separator">Competent: <b>Design system, Accessbility evaulation</b></p>
 
 
         </div>
@@ -175,8 +111,16 @@
 
           <i class="ion-ios-lightbulb-outline"></i>
           <span>UX Research</span>
-          <p class="separator">Proficient: <b>Survey, Card Sorting, Tree testing, IA analytics, UML</b></p>
+          <p class="separator">Proficient: <b>Survey, Card Sorting, IA analytics, UML</b></p>
+          <p class="separator">Competent: <b>Field study, Click stream</b></p>
 
+        </div>
+        <div class="services-block">
+
+          <i class="ion-ios-analytics-outline"></i>
+          <span>Analytics</span>
+          <p class="separator">Competent : <b>Data visualisation, Google Analytics</b></p>
+          <p class="separator">Advanced beginner: <b>Python</b></p>
         </div>
 
         <div class="services-block">
@@ -192,21 +136,9 @@
 
           <i class="ion-social-javascript-outline"></i>
           <span>Development</span>
-          <p class="separator">Proficient : <b>HTML,CSS, JavaScript, JQuery</b></p>
-          <p class="separator">Competent : <b>PhP, MySQL, Ajax, Three.js</b></p>
-
+          <p class="separator">Proficient : <b>HTML,CSS,</b></p>
+          <p class="separator">Competent : <b>AWS, JavaScript, JQuery, MySQL, Three.js</b></p>
         </div>
-
-        <div class="services-block">
-
-          <i class="ion-ios-analytics-outline"></i>
-          <span>Analytics</span>
-          <p class="separator">Competent : <b>Data visualisation(d3.js), Google Analytics</b></p>
-          <p class="separator">Advanced beginner: <b>Python</b></p>
-        </div>
-
-
-
         <div class="services-block">
 
           <i class="ion-social-apple-outline"></i>
@@ -467,7 +399,44 @@
     </div>
     <!-- End section journal -->
 
+    <!-- start section about us -->
+    <div id="about" class="paddsection">
+      <div class="container">
+        <div class="row justify-content-between">
 
+          <div class="col-lg-4 ">
+            <div class="div-img-bg">
+              <div class="about-img">
+                <img src="images/me1.jpg" class="img-responsive" alt="me">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="about-descr">
+              <!-- im a ux /ui designer austin based who loves clean, simple & unique design. i also
+          enjoy crafting brand identities, icons, & ilustration work. -->
+              <p class="p-heading">About me </p>
+              <p class="separator">Experienced UX Designer with over 8 years of industry design experience executing
+                user-centered product development, especially focusing on SaaS products for Small and Medium Enterprises
+                (SMEs). Balancing user usability and product feasibility is my passionate.
+              </p>
+              <p class="separator">Acquired additional skills as a MSc student in User Experience Engineering at
+                University of London, Goldsmiths with interest in driving development of meaningful products through
+                eliciting user feedback, employing user testing, and optimising user flow
+              </p>
+              <p class="separator">Excellent research knowledge, proficient in a broad array of technical skills in web
+                and app development, expertise in data analysis and visualisation, strong client and multi-disciplinary
+                team communication and collaboration, and passion for building valuable products that meet diverse
+                stakeholder needs
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end section about us -->
     <!-- start section footer -->
     <div id="contact" class="text-center">
       <div class="container">
@@ -531,6 +500,15 @@
 
     <!-- Template Main Javascript File -->
     <script src="js/main.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D49H1VC69V"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+
+      gtag('config', 'G-D49H1VC69V');
+    </script>
 
 </body>
 
