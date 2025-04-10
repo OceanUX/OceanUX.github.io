@@ -472,6 +472,7 @@ nav ul li a {
 
 .portfolio-thumbnail img {
   max-width: 100%;
+  border: 1px solid #EEEEEE;
 }
 
 #portfolio .container h4 {
