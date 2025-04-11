@@ -344,6 +344,9 @@ nav ul li a {
   padding-bottom: 80px;
 }
 
+#services .container {
+  text-align: center;
+}
 .services-carousel {
   width: 100vw;
   display: inline-flex;
