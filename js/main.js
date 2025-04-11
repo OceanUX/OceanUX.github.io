@@ -75,15 +75,15 @@ $(document).ready(function () {
   //  Typed Js
   // ========================================================================= //
 
-  var typed = $(".typed");
+  // var typed = $(".typed");
 
-  $(function () {
-    typed.typed({
-      strings: ["Shaw-Rong Tsai .", "UX Designer .", "passionate about design solutions .", "good at multi-faceted thinking before design .", "Ocean .",],
-      typeSpeed: 100,
-      loop: true,
-    });
-  });
+  // $(function () {
+  //   typed.typed({
+  //     strings: ["Shaw-Rong Tsai .", "UX Designer .", "passionate about design solutions .", "good at multi-faceted thinking before design .", "Ocean .",],
+  //     typeSpeed: 100,
+  //     loop: true,
+  //   });
+  // });
 
 
   // ========================================================================= //
