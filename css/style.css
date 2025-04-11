@@ -344,16 +344,13 @@ nav ul li a {
   padding-bottom: 80px;
 }
 
-#services .container {
-  text-align: center;
-}
-.services-carousel {
-  width: 100vw;
-  display: inline-flex;
+
+.services-provide {
+  display: inline-block;
 }
 
-.block {
-  height: 10rem;
+.service-section {
+  display: inline-flex;
 }
 
 .services-block {
