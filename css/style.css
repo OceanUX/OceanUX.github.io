@@ -345,18 +345,17 @@ nav ul li a {
 }
 
 
-.services-provide {
-  display: inline-block;
-}
-
-.service-section {
+.services-carousel {
   display: inline-flex;
 }
 
+
 .services-block {
-   display: block;
+  display: block;
   padding: 10px 0;
   height: 12rem;
+  width: 50%;
+  text-align: center;
 }
 
 .services-block span {
@@ -374,7 +373,6 @@ nav ul li a {
   margin: 0;
   font-size: 10px;
   line-height: 20px;
-  width: 25rem;
 }
 
 .services-block i {
