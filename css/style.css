@@ -303,8 +303,9 @@ nav ul li a {
 #about {
   width: 100%;
   height: auto;
-  background: #f7f7f7;
+  background: #fff;
   padding-top: 190px;
+  /* border-top: 1px solid #b8a07e; */
 }
 
 #about .div-img-bg {
@@ -343,12 +344,18 @@ nav ul li a {
   padding-bottom: 80px;
 }
 
-.owl-item {
-  float: left;
+.services-carousel {
+  width: 100%;
+  display: inline-flex;
+}
+
+.block {
+  height: 10rem;
 }
 
 .services-block {
   padding: 10px 0;
+  height: 12rem;
 }
 
 .services-block span {
@@ -366,7 +373,7 @@ nav ul li a {
   margin: 0;
   font-size: 10px;
   line-height: 20px;
-  width: 23rem;
+  width: 25rem;
 }
 
 .services-block i {
@@ -419,6 +426,7 @@ nav ul li a {
 #portfolio {
   position: relative;
   padding-bottom: 50px;
+  background: #fff;
 }
 
 #portfolio .portfolio-list {
@@ -474,6 +482,12 @@ nav ul li a {
   max-width: 100%;
   border: 1px solid #EEEEEE;
 }
+
+.portfolio-thumbnail img:hover {
+  filter: brightness(80%);
+  transition: all 0.5s ease-in-out 0s;
+}
+
 
 #portfolio .container h4 {
   font-size: 16px;
@@ -559,6 +573,7 @@ nav ul li a {
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
+  background: #f7f7f7;
 }
 
 .contact-details {
