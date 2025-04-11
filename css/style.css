@@ -354,6 +354,7 @@ nav ul li a {
 }
 
 .services-block {
+   display: block;
   padding: 10px 0;
   height: 12rem;
 }
