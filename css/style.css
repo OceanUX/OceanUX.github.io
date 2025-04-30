@@ -95,6 +95,10 @@ p {
   line-height: 28px;
 }
 
+ion-icon {
+  color: #fff;
+}
+
 ::-moz-selection {
   background: #b8a07e;
   color: #fff;
@@ -269,6 +273,7 @@ nav ul li a {
 }
 
 .header-content h1 {
+  margin-top: 15rem;
   font-size: 40px;
   font-weight: 700;
   margin-bottom: 10px;
@@ -286,14 +291,64 @@ nav ul li a {
   font-weight: 500;
 }
 
+.header-content .list-social {}
+
 .header-content .list-social li {
+  color: #fff;
   float: left;
   margin-right: 20px;
+  display: inline-flex;
 }
 
-.header-content .list-social li i {
+.header-content .list-social li ion-icon {
   color: #fff;
   font-size: 15px;
+  padding: 2px;
+}
+
+#CV {
+  font-size: 15px;
+  color: #fff;
+}
+
+#CV:hover,
+.list-social li ion-icon:hover {
+  background: #b8a07e;
+  border-radius: 2px;
+}
+
+.cta-button {
+  text-align: center;
+  margin-top: 10rem;
+  color: white;
+  font-size: 3rem;
+  transition: background-color 0.3s ease;
+  animation: bounce 1.5s infinite;
+}
+
+.cta-button:hover {
+  animation: bounce 1s infinite;
+}
+
+.cta-button ion-icon {
+  background: #b8a07e;
+  border-radius: 50%;
+}
+
+.cta-button:hover ion-icon {
+  background: #333;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
 }
 
 /*-----------------------------------------------------------------------------------*/
