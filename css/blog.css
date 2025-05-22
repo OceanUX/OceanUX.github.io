@@ -39,7 +39,7 @@ p {
 }
 
 .call-button {
-  border: 1px solid #086160;
+  border: 1px solid #086160 !important;
   border-radius: 0.25rem;
   width: 30%;
   text-align: center;
@@ -47,7 +47,7 @@ p {
 }
 
 .call-button:hover {
-  background: #086160;
+  background: #086160 !important;
   animation: bounce 1s infinite;
 }
 
