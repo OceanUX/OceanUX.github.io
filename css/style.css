@@ -552,6 +552,29 @@ nav ul li a {
   padding-right: 4px;
 }
 
+.portfolio-text {
+  padding: 25px 0px;
+  position: relative;
+  text-align: left;
+}
+
+.portfolio-text h4 {
+  display: block;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 0 13px 0;
+}
+
+.portfolio-text p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 24px;
+}
+
+.portfolio-text h4:hover {
+  color: #b8a07e;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /*  Journal
 /*-----------------------------------------------------------------------------------*/
@@ -620,7 +643,6 @@ nav ul li a {
 
 .journal-block h4:hover {
   color: #b8a07e;
-
 }
 
 /*-----------------------------------------------------------------------------------*/
