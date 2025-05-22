@@ -645,6 +645,31 @@ nav ul li a {
   color: #b8a07e;
 }
 
+.call-button {
+  border: 1px solid #b8a07e;
+  border-radius: 0.25rem;
+  width: 30%;
+  text-align: center;
+  margin: 0 auto !important;
+  padding: 0.5rem !important;
+}
+
+.call-button:hover {
+  background: #b8a07e;
+}
+
+.call-button:hover p {
+  color: #fff !important;
+
+}
+
+.call-button p {
+  color: #b8a07e !important;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin: 0 !important;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /*  Contact
 /*-----------------------------------------------------------------------------------*/
@@ -683,7 +708,8 @@ nav ul li a {
   margin-right: 10px;
 }
 
-#contact .socials-media ul li a {
+#contact .socials-media ul li a,
+#contact .socials-media ul li ion-icon {
   font-size: 24px;
   color: #999;
   letter-spacing: 0.1em;
@@ -697,7 +723,8 @@ nav ul li a {
   transition: all 0.5s ease-in-out 0s;
 }
 
-#contact .socials-media ul li a:hover {
+#contact .socials-media ul li a:hover,
+#contact .socials-media ul li a:hover ion-icon {
   color: #b8a07e;
   -moz-transition: all 0.5s ease-in-out 0s;
   -ms-transition: all 0.5s ease-in-out 0s;
