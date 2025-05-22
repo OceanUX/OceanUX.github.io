@@ -38,7 +38,7 @@ p {
   margin-bottom: 2% !important;
 }
 
-.cta-button {
+.call-button {
   border: 1px solid #086160;
   border-radius: 0.25rem;
   width: 30%;
@@ -46,15 +46,16 @@ p {
   margin: 5% auto 3% !important;
 }
 
-.cta-button:hover {
+.call-button:hover {
   background: #086160;
+  animation: bounce 1s infinite;
 }
 
-.cta-button:hover p {
+.call-button:hover p {
   color: #fff !important;
 }
 
-.cta-button p {
+.call-button p {
   color: #086160 !important;
   font-size: 1.5rem;
   font-weight: 500;
@@ -137,7 +138,7 @@ p {
 }
 
 .effectivity img {
-  width: 30%;
+  width: 20%;
   margin-left: 30%;
 }
 
