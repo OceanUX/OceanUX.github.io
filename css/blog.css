@@ -19,12 +19,47 @@ body {
   color: #292929 !important;
 }
 
+.main-content {
+  background: #f7f7f7;
+}
+
+.main-content .container-main {
+  display: inline-block;
+  width: 100%;
+}
+
+.main-content .container-main .block-main {
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.container-main .block-main .content-main {
+  background: #fff none repeat scroll 0 0;
+  display: inline-block;
+  width: 100%;
+}
+
+@property --case-color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: lightgray;
+}
+
 h3 {
   font-size: 1.5rem;
   font-weight: 600;
   padding-top: 1.5rem;
-  color: #086160 !important;
+  color: var(--case-color) !important;
 }
+
+.m2b2c {
+  --case-color: #007BB9;
+}
+
+.ticket {
+  --case-color: #086160;
+}
+
 
 p {
   margin: 0.5rem 0 !important;
@@ -39,26 +74,11 @@ p {
 }
 
 .call-button {
-  border: 1px solid #086160 !important;
-  border-radius: 0.25rem;
-  width: 30%;
-  text-align: center;
   margin: 5% auto 3% !important;
 }
 
 .call-button:hover {
-  background: #086160 !important;
   animation: bounce 1s infinite;
-}
-
-.call-button:hover p {
-  color: #fff !important;
-}
-
-.call-button p {
-  color: #086160 !important;
-  font-size: 1.5rem;
-  font-weight: 500;
 }
 
 .divider-1 {
@@ -71,7 +91,7 @@ p {
 .divider {
   width: 100%;
   height: 2px;
-  background: #36B4AE;
+  background: var(--case-color);
   margin: 3rem 0;
 }
 
@@ -103,6 +123,21 @@ p {
   float: none;
 }
 
+ul li {
+  line-height: 1.5;
+  font-size: 0.9rem !important;
+}
+
+.reflection h4 {
+  color: var(--case-color) !important;
+  font-size: 1.2rem !important;
+}
+
+ion-icon {
+  color: var(--case-color) !important;
+}
+
+/* -----------ticket------------------- */
 .keyuser {
   display: flex;
 }
@@ -142,39 +177,40 @@ p {
   margin-left: 30%;
 }
 
-ul li {
-  line-height: 1.5;
-  font-size: 0.9rem !important;
+/* -----------m2bmc------------------- */
+
+.timeline {
+  width: 80%;
+  text-align: center;
+  margin: auto;
 }
 
-.reflection h4 {
-  color: #086160 !important;
-  font-size: 1.2rem !important;
+.mockups {
+  background: linear-gradient(0deg, rgba(0, 181, 221, 1) 0%, rgba(0, 123, 185, 1) 100%);
 }
 
-ion-icon {
-  color: #086160 !important;
+.mockups * {
+  color: #fff !important;
 }
 
-.main-content {
-  background: #f7f7f7;
+.mockups h3,
+.mockups p {
+  padding: 0.5rem 1rem;
 }
 
-.main-content .container-main {
-  display: inline-block;
-  width: 100%;
+.launch-img {
+  width: 70%;
 }
 
-.main-content .container-main .block-main {
-  margin-bottom: 30px;
-  overflow: hidden;
+.reflection .outcome {
+  border-left: 3px solid var(--case-color);
+  padding: 0 0 4px 4px;
 }
 
-.container-main .block-main .content-main {
-  background: #fff none repeat scroll 0 0;
-  display: inline-block;
-  width: 100%;
-}
+
+/* ------------------------------------ */
+
+
 
 .journal-txt h4 a {
   display: block;
