@@ -12,33 +12,20 @@ $(document).ready(function () {
 
   $('a[href^="#"]').on('click', function (e) {
     var target = this.hash;
-    // Guard: skip if no hash or just "#"
     if (!target || target === "#") return;
 
-    // Guard: skip if target element doesn't exist
     var $target = $(target);
     if (!$target.length) return;
 
     e.preventDefault();
     $(document).off("scroll");
 
-    // $('a').removeClass('active');
-    // if ($(window).width() < 768) {
-    //   $('.nav-menu').slideUp();
-    // }
-    // $(this).addClass('active');
-
+    var navHeight = $('#main-nav').outerHeight() || 0;
     $('html, body').stop().animate({
-      'scrollTop': $target.offset().top - 80
+      'scrollTop': $target.offset().top - navHeight
     }, 1000, 'swing', function () {
-      // Always update the URL hash (shows as index.html#your-id)
+      // Update the URL hash (shows as index.html#your-id)
       location.hash = target;
-      var id = target.replace('#', '');
-      if (history.pushState) {
-        history.pushState(null, null, 'section-' + id);
-      } else {
-        location.search = 'section-' + id;
-      }
       $(document).on("scroll", onScroll);
     });
   });
