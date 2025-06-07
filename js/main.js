@@ -33,6 +33,12 @@ $(document).ready(function () {
     }, 1000, 'swing', function () {
       // Always update the URL hash (shows as index.html#your-id)
       location.hash = target;
+      var id = target.replace('#', '');
+      if (history.pushState) {
+        history.pushState(null, null, 'section-' + id);
+      } else {
+        location.search = 'section-' + id;
+      }
       $(document).on("scroll", onScroll);
     });
   });
