@@ -23,18 +23,21 @@ $(document).ready(function () {
 
     $(this).addClass('active');
 
-    var target = this.hash,
-      menu = target;
+    var target = this.hash;
+    var $target = $(target);
 
-    target = $(target);
     $('html, body').stop().animate({
-      'scrollTop': target.offset().top - 80
-    }, 1000, 'swing', function () {
-      window.location.hash = target.selector;
+      'scrollTop': $target.offset().top - 80
+    }, 1000, 'swing', () => {
+      // Update the URL hash without jumping
+      if (history.pushState) {
+        history.pushState(null, null, target);
+      } else {
+        location.hash = target;
+      }
       $(document).on("scroll", onScroll);
     });
   });
-
 
   function onScroll(event) {
     if ($('.home').length) {
