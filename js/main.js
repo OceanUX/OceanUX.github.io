@@ -11,33 +11,32 @@ $(document).ready(function () {
   $(document).on("scroll", onScroll);
 
   $('a[href^="#"]').on('click', function (e) {
+    var target = this.hash;
+    // Guard: skip if no hash or just "#"
+    if (!target || target === "#") return;
+
+    // Guard: skip if target element doesn't exist
+    var $target = $(target);
+    if (!$target.length) return;
+
     e.preventDefault();
     $(document).off("scroll");
 
-    $('a').each(function () {
-      $(this).removeClass('active');
-      if ($(window).width() < 768) {
-        $('.nav-menu').slideUp();
-      }
-    });
-
+    $('a').removeClass('active');
+    if ($(window).width() < 768) {
+      $('.nav-menu').slideUp();
+    }
     $(this).addClass('active');
-
-    var target = this.hash;
-    var $target = $(target);
 
     $('html, body').stop().animate({
       'scrollTop': $target.offset().top - 80
-    }, 1000, 'swing', () => {
-      // Update the URL hash without jumping
-      if (history.pushState) {
-        history.pushState(null, null, target);
-      } else {
-        location.hash = target;
-      }
+    }, 1000, 'swing', function () {
+      // Always update the URL hash (shows as index.html#your-id)
+      location.hash = target;
       $(document).on("scroll", onScroll);
     });
   });
+
 
   function onScroll(event) {
     if ($('.home').length) {
