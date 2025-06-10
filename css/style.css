@@ -317,9 +317,43 @@ nav ul li a {
   border-radius: 2px;
 }
 
+/* Customer ticker styles */
+.customer {
+  overflow: hidden;
+  width: 100%;
+  margin: 10% 0 20px;
+  text-align: center;
+}
+
+.customer-ticker {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  gap: 40px;
+  animation: ticker 20s linear infinite;
+  width: max-content;
+}
+
+.customer-ticker img {
+  height: 4rem;
+  width: auto;
+  object-fit: contain;
+  display: inline-block;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(70%);
+  }
+
+  100% {
+    transform: translateX(-70%);
+  }
+}
+
 .cta-button {
   text-align: center;
-  margin-top: 10rem;
+  margin-top: 4rem;
   color: white;
   font-size: 3rem;
   transition: background-color 0.3s ease;
