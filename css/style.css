@@ -291,7 +291,6 @@ nav ul li a {
   font-weight: 500;
 }
 
-.header-content .list-social {}
 
 .header-content .list-social li {
   color: #fff;
@@ -321,7 +320,7 @@ nav ul li a {
 .customer {
   overflow: hidden;
   width: 100%;
-  margin: 10% 0 20px;
+  margin: 5% 0 20px;
   text-align: center;
 }
 
@@ -353,7 +352,7 @@ nav ul li a {
 
 .cta-button {
   text-align: center;
-  margin-top: 4rem;
+  margin-top: 3rem;
   color: white;
   font-size: 3rem;
   transition: background-color 0.3s ease;
