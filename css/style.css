@@ -320,10 +320,11 @@ nav ul li a {
 .customer {
   overflow: hidden;
   width: 100%;
-  margin: 5% 0 20px;
+  margin: 8% 0 20px;
   padding-bottom: 20px;
   text-align: center;
 }
+
 
 .customer-ticker {
   display: flex;
@@ -335,7 +336,7 @@ nav ul li a {
 }
 
 .customer-ticker img {
-  height: 4rem;
+  height: 3rem;
   width: auto;
   object-fit: contain;
   display: inline-block;
@@ -343,18 +344,18 @@ nav ul li a {
 
 @keyframes ticker {
   0% {
-    transform: translateX(70%);
+    transform: translateX(60%);
   }
 
   100% {
-    transform: translateX(-70%);
+    transform: translateX(-60%);
   }
 }
 
 .cta-button {
   text-align: center;
   color: white;
-  font-size: 3rem;
+  font-size: 2rem;
   transition: background-color 0.3s ease;
   animation: bounce 1.5s infinite;
 }
