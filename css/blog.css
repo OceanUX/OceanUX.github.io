@@ -64,6 +64,10 @@ h3 {
   --case-color: #465B7B;
 }
 
+.NHS {
+  --case-color: #0077C0;
+}
+
 p {
   margin: 0.5rem 0 !important;
   color: #292929 !important;
@@ -158,6 +162,14 @@ blockquote {
 
 .linkurl:hover {
   opacity: 0.6;
+}
+
+.annotated {
+  font-size: 0.8rem !important;
+  color: #666 !important;
+  font-style: italic;
+  text-align: center;
+  padding-bottom: 1rem !important;
 }
 
 /* -----------ticket------------------- */
@@ -271,8 +283,21 @@ iframe {
 
 /* ------------------------------------ */
 
+/* -------------NHS------------------- */
+.overview .Col-2 {
+  align-items: center
+}
 
+.NHS-Research .img {
+  margin: 1rem auto;
+  text-align: center;
+}
 
+.NHS-Research img {
+  width: 70%;
+}
+
+/* ------------------------------------ */
 .journal-txt h4 a {
   display: block;
   font-size: 19px;
